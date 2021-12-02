@@ -8,13 +8,19 @@ Satellite-Overlay
 
 This React App will grab a users geolocation, post it to the air table, and then use a get request on both the air table and N2YO API, to find the nearest Starlink satellite to your location.
 
-
+<img width="417" alt="Screen Shot 2021-12-02 at 10 08 49 AM" src="https://user-images.githubusercontent.com/92862291/144449813-62f3d7ed-ca11-43c0-ada0-9be904bb70e9.png">
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+<img width="690" alt="Screen Shot 2021-12-02 at 10 18 56 AM" src="https://user-images.githubusercontent.com/92862291/144450669-97d668aa-e83b-4b99-8357-bc2a57d19171.png">
+
+<img width="174" alt="Screen Shot 2021-12-02 at 10 20 28 AM" src="https://user-images.githubusercontent.com/92862291/144450698-bdfeb360-5731-4b8f-870b-cfa92a2fc613.png">
 
 ## Component Hierarchy
+
+<img width="398" alt="Screen Shot 2021-12-02 at 10 09 50 AM" src="https://user-images.githubusercontent.com/92862291/144449679-ebf513a2-746c-4281-b7eb-df24f3c2f719.png">
+
+
 Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
 
 ## API and Data Sample
@@ -73,11 +79,10 @@ This schedule will be used to keep track of your progress throughout the week an
 |---|---| ---|
 |December 1| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |December 2| Project Approval | Incomplete
-|December 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|December 2-5| Get/Post Javascript Logic | Incomplete
+|December 6| Styling | Incomplete
+|December 7| Finsih MVP  | Incomplete
+|December 8-9| POST MVP  | Incomplete
 
 ## Timeframes
 
@@ -87,16 +92,22 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| GET/POST Request | H | 3hrs| N/A | N/A |
+| Adding Components | H | 6hrs| N/A | N/A |
+| Javascript Algorithms | H | 8hrs| N/A | N/A |
+| Javascript Compare | H | 5hrs| N/A | N/A |
+| STYLING | M | 4hrs| N/A | N/A |
+| POST MVP C3 | L | 5hrs | N/A | N/A |
+| POST MVP JAVASCRIPT COMPARE | L | 8hrs | N/A | N/A |
+| POST MVP JAVASCRIPT DISPLAY | L | 6hrs | N/A | N/A |
+| Total | H | 51hrs| N/A | N/A |
 
 ## SWOT Analysis
 
-### Strengths:
+### Strengths: I think I may be overestimating my time required to finish the Javascript
 
-### Weaknesses:
+### Weaknesses: I will have a difficult time with the components
 
-### Opportunities:
+### Opportunities: Trying to push myself in this project, with that comes great learning opportunities. Especially with the Post-MVP
 
-### Threats:
+### Threats: I think I have a pretty clear plan, but I'm worried I will encounter something that is much more difficult than I had originally expected.
