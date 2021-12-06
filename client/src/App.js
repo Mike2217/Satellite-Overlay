@@ -68,7 +68,8 @@ function App() {
     let latCompare = []
     let longCompare = []
     let latLongCompare = []
-    let latLongArray = []
+    let closestCompare = []
+    let satNames = []
     // console.log(satData)
     satData.forEach((e) => {
       let satLatLong = (e.satlat, e.satlng)
@@ -77,47 +78,82 @@ function App() {
       // latLongObject.push(latCompare, longCompare)
       // latLongArray.push(latitude - e.satlat)
       // latLongArray.push(longitude - e.satlng)
-
-      if (e.satlat > 0) {
-        latCompare.push(latitude - e.satlat)
-        latLongArray.push(latitude - e.satlat)
-      }
-      else if (e.satlat < 0) {
-        latCompare.push(latitude + e.satlat)
-        latLongArray.push(latitude + e.satlat)
-
+      Math.abs(e.satlat)
+      Math.abs(e.satlng)
+      latCompare.push(latitude - e.satlat)
+      longCompare.push(longitude - e.satlng)
+      satNames.push(e.satname)
+      // if (e.satlat > 0) {
+      //   latCompare.push(latitude - e.satlat)
+      //   latLongArray.push(latitude - e.satlat)
+      // }
+      // else if (e.satlat < 0) {
+      //   latCompare.push(latitude + e.satlat)
+      //   latLongArray.push(latitude + e.satlat)
         
-      }
-      if (e.satlng > 0) {
-        longCompare.push(longitude - e.satlng)
-        latLongArray.push(longitude - e.satlng)
+      // }
+      // if (e.satlng > 0) {
+      //   longCompare.push(longitude - e.satlng)
+      //   latLongArray.push(longitude - e.satlng)
 
-      }
-      else if (e.satlng < 0) {
-        longCompare.push(longitude + e.satlng)
-        latLongArray.push(longitude + e.satlng)
+      // }
+      // else if (e.satlng < 0) {
+      //   longCompare.push(longitude + e.satlng)
+      //   latLongArray.push(longitude + e.satlng)
 
-      }
+      // }
       satLocations.push(satLatLong)
     })
-    for (let i = 0; i <= satLocations.length -1; i++){
-      if (longCompare > 0) {
+
+    // satLocations.forEach((e) => {
+    //   Math.abs(latCompare, longCompare)
+    //   let c = latCompare - longCompare
+    //   latLongCompare.push(c)
+    // })
+    for (let i = 0; i <= satLocations.length - 1; i++) {
+      if (longCompare[i] > 0) {
         let c = (latCompare[i] - longCompare[i])
         latLongCompare.push(c)
       }
       else if (longCompare[i] < 0) {
         let d = (latCompare[i] + longCompare[i])
-        latLongCompare.push(d, satData[i])
+        latLongCompare.push(d)
       }
     }
-    latLongCompare.sort()
-    let closestSatellite = latLongCompare[0]
+    latLongCompare.forEach((e) => {
+      closestCompare.push(Math.abs(e))
+    })
+    console.log(`TEST${latLongCompare}`)
+    console.log(closestCompare)
+    let satIndex = closestCompare.indexOf(Math.min.apply(Math, closestCompare))
+    let closestSatelliteData = Math.min.apply(Math, closestCompare)
+    let closestSatellite = satData[satIndex].satname
+    // let closestSatellite = latLongCompare[0]
+    // satData.forEach((e) => {
+    //   console.log(e)
+    //   console.log(Math.abs(e.satlng))
+    //   console.log(Math.abs(e.satlat))
+    //   if ((e.satlng - e.satlat) == closestSatellite) {
+    //   test.push(e.satname)
+    //   }
+    // })
+    // for (let i = 0; i <= satData.length; i++){
+    // Math.abs(satData.satlng)
+    // Math.abs(satData.satlat)
+    // if ((satData.satlng - satData.satlat) == closestSatellite) {
+    //   test.push(satData[i].satname)
+    // } else {
+    //   console.log('error')
+    // }
+    // }
+    // console.log(`PLEASE WORK ${test}`)
     console.log(`User Location: ${userLocation}`)
+    console.log(`Satellites Near User: ${satNames}`)
     console.log(`Satellite Locations: ${satLocations}`)
-    // console.log(latCompare)
-    // console.log(longCompare)
-    console.log(`Closest Comparison ${latLongCompare}`)
-    console.log(closestSatellite)
+    console.log(latCompare)
+    console.log(longCompare)
+    console.log(`Closest Comparison ${closestSatelliteData}`)
+    console.log(`Closest Starlink Satellite:${closestSatellite}`)
     // console.log(latLongObject)
     // console.log(latLongArray)
   }
