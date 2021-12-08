@@ -2,24 +2,30 @@ import { useState, useEffect } from 'react'
 import SatelliteData from './SatelliteData';
 
 export default function UserLocation() {
-const [longitude, setLongitude] = useState(0)
-const [latitude, setLatitude] = useState(0)
+const [longitude, setLongitude] = useState(null)
+const [latitude, setLatitude] = useState(null)
   
   //https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
   function getLocation() {
-    if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(showPosition)
+    if (!navigator.geolocation) {
+      console.log('Geolocation is not supported by your browser');
     } else {
-      alert('SOMETHING WENT HORRIBLY WRONG')
+      console.log('Locating...');
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLatitude(position.coords.latitude)
+        setLongitude(position.coords.longitude)
+      })
     }
   }
-  function showPosition(position) {
-    setLatitude(position.coords.latitude)
-    setLongitude(position.coords.longitude)
-  }
-  getLocation()
+  useEffect(() => {
+    getLocation()
+  }, [])
 
-  console.log(latitude, longitude)
+  
+  if (!longitude) return <h1>LOADING</h1>
+
+  // console.log(longitude, latitude)
+
   return (
     <div>
       <SatelliteData latitude={latitude} longitude={longitude} />

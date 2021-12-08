@@ -5,45 +5,16 @@ import { useState, useEffect } from 'react'
 import { Link, Routes, Route } from 'react-router-dom'
 import { grabUserData, config, BASE_URL } from './services'
 import UserLocation from './components/UserLocation';
+import SatelliteData from './components/SatelliteData';
+import HomePage from './components/HomePage'
+import DisplayCurrentUser from './components/DisplayCurrentUser'
+import DisplayPreviousUsers from './components/DisplayPreviousUsers'
+
+
 
 function App() {
   const [toggle, setToggle] = useState(false)
   const [previousUsers, setPreviousUsers] = useState([])
-  // const [longitude, setLongitude] = useState(0)
-  // const [latitude, setLatitude] = useState(0)
-    
-
-  //   function getLocation() {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(showPosition, showError);
-  //     console.log(latitude, longitude)
-  //   } else {
-  //     alert('SOMETHING WENT HORRIBLY WRONG')
-  //   }
-  // }
-  // getLocation()
-  
-  // function showPosition(position) {
-  //   setLatitude(position.coords.latitude)
-  //   setLongitude(position.coords.longitude)
-  // }
-
-  // function showError(error) {
-  //   switch(error.code) {
-  //     case error.PERMISSION_DENIED:
-  //       console.log("User denied the request for Geolocation.")
-  //       break;
-  //     case error.POSITION_UNAVAILABLE:
-  //       console.log("Location information is unavailable.")
-  //       break;
-  //     case error.TIMEOUT:
-  //       console.log("The request to get user location timed out.")
-  //       break;
-  //     case error.UNKNOWN_ERROR:
-  //       console.log("An unknown error occurred.")
-  //       break;
-  //   }
-  // }
 
   useEffect(() => {
     const getAllUserData = async () => {
@@ -60,12 +31,7 @@ function App() {
   return (
     
     <div className="App">
-      <UserLocation/>
-      <Routes>
-        {/* <Route exact path='/' component={App} />
-        <Route exact path='/Your-Nearest-Satellite-Data' component={DisplayCurrentUser} />
-        <Route exact path='/previous-users' component={DisplayUsers} /> */}
-      </Routes>
+      <UserLocation />
       <nav className='NAVBAR'>
         <div className='navitems'>
           <a href='https://localhost:3000/'><img id='homebutton' src='https://icon-library.com/images/home-button-icon-png/home-button-icon-png-10.jpg' /></a>
@@ -75,8 +41,14 @@ function App() {
           STARLINK SATELLITE TRACKER
         </div>
       </nav>
+      <Routes>
+        FIX BELOW
+        <Route path='/' component={<HomePage />} />
+        <Route path='/Your-Nearest-Satellite-Data' component={<DisplayCurrentUser />} />
+        <Route path='/previous-users' component={<DisplayPreviousUsers  />} />
+      </Routes>
       <div className='main-container'>
-        {/* <UserData/> */}
+        <UserData/>
       </div>
       </div>
   );
