@@ -1,9 +1,13 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import React, {Component} from "react";
+import React, { Component } from "react";
+import UserData from './UserData';
 
 
-  function Compare(props) {
+function Compare(props) {
+  const latitude = props.latitude
+  const longitude = props.longitude
+  const satData = props.satData
   let userLocation = [props.latitude, props.longitude]
   let satLocations = []
   let latCompare = []
@@ -60,8 +64,8 @@ import React, {Component} from "react";
 
     return (
       <div>
-      <DisplayUsers closestSatellite={closestSatellite} altitude={altitude} />
-      <UserData closestSatellite={closestSatellite} altitude={altitude} />
+      {/* // <DisplayUsers closestSatellite={closestSatellite} altitude={altitude} /> */}
+      <UserData closestSatellite={closestSatellite} altitude={altitude} latitude={latitude} longitude={longitude} satData={satData}  />
       </div>
     )
 }

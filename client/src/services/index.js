@@ -1,16 +1,17 @@
 import axios from 'axios'
 
+
 export const BASE_URL =
-  `https://api.airtable.com/v0/${process.env.AIRTABLE_API_BASE}/DATA`
+  `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/DATA`
 export const config = {
   headers: {
-    Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`
+    Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
   }
 }
 
 export const grabUserData = async () => {
   const response = await axios.get(BASE_URL, config)
-  return response.data.records
+  return response.data
 }
 
 export const postUserData = async (body) => {
