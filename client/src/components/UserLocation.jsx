@@ -20,7 +20,8 @@ const [latitude, setLatitude] = useState(0)
   return (
     <div>
       <SatelliteData latitude={latitude} longitude={longitude} />
-      <Compare latitude={latitude} longitude={longitude}/>
+      <Compare latitude={latitude} longitude={longitude} />
+      <UserData latitude={latitude} longitude={longitude} />
     </div>
   )
 }

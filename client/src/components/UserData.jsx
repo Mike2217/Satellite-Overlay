@@ -1,12 +1,15 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import React, {Component} from "react";
+
 
 
 export default function UserData(props) {
   const [Username, setUserName] = useState('')
   let Latitude = props.latitude
   let Longitude = props.longitude
-  let closestSatellite = props.closestSat
+  let ClosestSatellite = props.closestSat
+  let Altitude = props.Altitude
 
   const handleSubmit = async (e) => {
 
@@ -16,7 +19,7 @@ export default function UserData(props) {
       Longitude,
       Latitude,
       Altitude,
-      closestSatellite
+      ClosestSatellite
     }
     await axios.post(`https://api.airtable.com/v0/appBTsthJKqmbHxPy/DATA?api_key=${process.env.airTable_base}`, newUserData);
   }

@@ -1,8 +1,50 @@
 .App {
   text-align: center;
-  background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg')
+  /* background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg');
+  background-size: cover;
+  min-height: 100%;
+  border: red 5px solid; */
+}
+.NAVBAR{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Space_banner.jpg/1596px-Space_banner.jpg');
+  background-size: cover;
+  max-width: auto;
+  border: solid red 5px;
+  height: 100px;
+}
+.navitems{
+  display: flex;
+  justify-content: right;
+}
+#welcomeMessage{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+#homebutton{
+  height: 20px;
+  width: 20px;
+}
+#prevUsersButton{
+  height: 20px;
+  width: 20px;
+}
+#userDataButton{
+  height: 100px;
+  width: 100px;
 }
 
+.main-container{
+  display: flex;
+  justify-content: center;
+  color: lightpink;
+  min-height: 100vh;
+  /* background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg'); */
+  background-image: url('https://cerexio.com/wp-content/uploads/2020/08/spacex-starlink-cerexio-blog-post-cover-01.jpg');
+  background-size: cover;
+  border: green 5px solid;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

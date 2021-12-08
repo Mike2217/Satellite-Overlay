@@ -13,7 +13,8 @@ ReactDOM.render(
     <Router>
       <App />
       <Routes>
-      <Route exact path='/' component={App} />
+        <Route exact path='/' component={App} />
+        {/* <Route exact path='/Your-Nearest-Satellite-Data' component={DisplayCurrentUser} /> */}
       {/* <Route exact path='/previous-users' component={DisplayUsers} /> */}
       </Routes>
     </Router>

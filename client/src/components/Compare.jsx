@@ -1,5 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import React, {Component} from "react";
+
 
   function Compare(props) {
   let userLocation = [props.latitude, props.longitude]
@@ -43,6 +45,7 @@ import { useState, useEffect } from 'react'
   let satIndex = closestCompare.indexOf(Math.min.apply(Math, closestCompare))
   let closestSatelliteData = Math.min.apply(Math, closestCompare)
     let closestSatellite = props.satData[satIndex].satname
+    let altitude = props.satData[satIndex].altitude
 
     
   console.log(`User Location: ${userLocation}`)
@@ -51,11 +54,16 @@ import { useState, useEffect } from 'react'
   console.log(latCompare)
   console.log(longCompare)
   console.log(`Closest Comparison ${closestSatelliteData}`)
-    console.log(`Closest Starlink Satellite:${closestSatellite}`)
-    props.setClosestSat(closestSatellite)
+  console.log(`Closest Starlink Satellite:${closestSatellite}`)
+  props.setClosestSat(closestSatellite)
+
+
+    return (
+      <div>
+      <DisplayUsers closestSatellite={closestSatellite} altitude={altitude} />
+      <UserData closestSatellite={closestSatellite} altitude={altitude} />
+      </div>
+    )
 }
-
-
-
 
 export default Compare;
