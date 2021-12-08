@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import { Link, Routes, Route } from 'react-router-dom'
 import { grabUserData, config, BASE_URL } from './services'
 import UserLocation from './components/UserLocation';
+import UserData from './components/UserData';
+import Navbar from './components/Navbar';
 import SatelliteData from './components/SatelliteData';
 import HomePage from './components/HomePage'
 import DisplayCurrentUser from './components/DisplayCurrentUser'
@@ -32,20 +34,12 @@ function App() {
     
     <div className="App">
       <UserLocation />
-      <nav className='NAVBAR'>
-        <div className='navitems'>
-          <a href='https://localhost:3000/'><img id='homebutton' src='https://icon-library.com/images/home-button-icon-png/home-button-icon-png-10.jpg' /></a>
-          <a href='https://localhost:3000/previous-users'><img id='prevUsersButton' src='https://media2.giphy.com/media/4NPT1ipEUoiMo/giphy.gif'/></a>
-        </div>
-        <div id='welcomeMessage'>
-          STARLINK SATELLITE TRACKER
-        </div>
-      </nav>
+      <Navbar />
       <Routes>
-        FIX BELOW
+        {/* FIX BELOW
         <Route path='/' component={<HomePage />} />
         <Route path='/Your-Nearest-Satellite-Data' component={<DisplayCurrentUser />} />
-        <Route path='/previous-users' component={<DisplayPreviousUsers  />} />
+        <Route path='/previous-users' component={<DisplayPreviousUsers  />} /> */}
       </Routes>
       <div className='main-container'>
         <UserData/>
