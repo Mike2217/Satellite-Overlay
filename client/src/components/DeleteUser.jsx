@@ -1,6 +1,4 @@
-import { grabUserData } from './services'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 
 function DeleteUser() {

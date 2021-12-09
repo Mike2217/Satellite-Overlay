@@ -1,11 +1,8 @@
 import './DisplayPreviousUsersStyling.css'
-import Navbar from './Navbar' 
-
 
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link, Routes, Route } from 'react-router-dom'
-import { grabUserData, config, BASE_URL } from '../services'
+import { config, BASE_URL } from '../services'
 
 
 

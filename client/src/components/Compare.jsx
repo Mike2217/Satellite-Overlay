@@ -36,7 +36,7 @@ function Compare(props) {
           latCompare.push(props.latitude - e.satlat)
           longCompare.push(props.longitude - e.satlng)
 
-          console.log(satNames.push(e.satname))
+          // console.log(satNames.push(e.satname))
           satLocations.push(satLatLong)
         })
 
@@ -57,24 +57,24 @@ function Compare(props) {
         // console.log(`${latLongCompare}`)
         // console.log(closestCompare)
         let satIndex = closestCompare.indexOf(Math.min.apply(Math, closestCompare))
-        console.log(props.satData)
+        // console.log(props.satData)
         let closestSatelliteData = Math.min.apply(Math, closestCompare)
         setClosestSatellite(props.satData[satIndex].satname)
-        console.log(closestSatellite)
+        // console.log(closestSatellite)
         setAltitude(props.satData[satIndex].satalt)
 
     
-            console.log(`User Location: ${userLocation}`)
-            console.log(`Satellites Near User: ${satNames}`)
-            console.log(`Satellite Locations: ${satLocations}`)
-            console.log(latCompare)
-            console.log(longCompare)
-      console.log(`Closest Comparison ${closestSatelliteData}`)
-      console.log(`Altitude: ${Altitude}`)
-            console.log(`Closest Starlink Satellite:${closestSatellite}`)
+      //       console.log(`User Location: ${userLocation}`)
+      //       console.log(`Satellites Near User: ${satNames}`)
+      //       console.log(`Satellite Locations: ${satLocations}`)
+      //       console.log(latCompare)
+      //       console.log(longCompare)
+      // console.log(`Closest Comparison ${closestSatelliteData}`)
+      // console.log(`Altitude: ${Altitude}`)
+      //       console.log(`Closest Starlink Satellite:${closestSatellite}`)
     }
     else {
-      console.log('ERROR HERE')
+      // console.log('ERROR HERE')
     }
   }, [props.satData])
     return (

@@ -24,7 +24,6 @@ export default function UserData(props) {
       Altitude,
       ClosestSatellite
     };
-    console.log('HELLO WORLD')
     await postUserData(newUserData);
 
     
