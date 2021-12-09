@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Link, Routes, Route, Switch } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import UserLocation from './components/UserLocation';
 import Navbar from "./components/Navbar";
 import DisplayPreviousUsers from './components/DisplayPreviousUsers'

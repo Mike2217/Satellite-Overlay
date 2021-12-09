@@ -10,9 +10,9 @@ const [latitude, setLatitude] = useState(null)
   //https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
   function getLocation() {
     if (!navigator.geolocation) {
-      console.log('Geolocation is not supported by your browser');
+      // console.log('Geolocation is not supported by your browser');
     } else {
-      console.log('Locating...');
+      // console.log('Locating...');
       navigator.geolocation.getCurrentPosition((position) => {
         setLatitude(position.coords.latitude)
         setLongitude(position.coords.longitude)

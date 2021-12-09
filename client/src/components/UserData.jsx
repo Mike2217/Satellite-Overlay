@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./UserDataStyling.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { postUserData, deleteUserData} from "../services";
+import { postUserData} from "../services";
 import DisplayCurrentUser from "./DisplayCurrentUser";
 
 export default function UserData(props) {
-  const [toggle, setToggle] = useState(false)
+  // const [toggle, setToggle] = useState(false)
   const [Username, setUserName] = useState("");
   const ClosestSatellite = props.closestSatellite;
   const Longitude = props.longitude;
@@ -25,7 +25,7 @@ export default function UserData(props) {
     };
     await postUserData(newUserData);
 
-    setToggle(prevToggle => !prevToggle)
+    // setToggle(prevToggle => !prevToggle)
     // await axios.post(BASE_URL, config, newUserData)
     navigate("/Your-Nearest-Satellite-Data");
   };

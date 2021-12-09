@@ -23,7 +23,7 @@ export default function SatelliteData(props) {
     } else {
       // console.log('NO LAT OR LONG')
     }
-  }, [])
+  }, [latitude, longitude])
   // console.log(`Satellite Data: ${satData}`)
   return (
     <div>
