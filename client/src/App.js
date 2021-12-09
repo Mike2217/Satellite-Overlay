@@ -2,7 +2,7 @@
 import './App.css';
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link, Routes, Route } from 'react-router-dom'
+import { Link, Routes, Route, Switch } from 'react-router-dom'
 import { grabUserData, config, BASE_URL } from './services'
 import UserLocation from './components/UserLocation';
 import UserData from './components/UserData';
@@ -22,10 +22,11 @@ function App() {
       <Navbar />
       <UserLocation />
       <Routes>
-        {/* FIX BELOW
-        <Route path='/' component={<HomePage />} />
-        <Route path='/Your-Nearest-Satellite-Data' component={<DisplayCurrentUser />} />
-        <Route path='/previous-users' component={<DisplayPreviousUsers  />} /> */}
+    
+        <Route path='/' element={<UserData />} />
+        <Route path='/Your-Nearest-Satellite-Data' element={<DisplayCurrentUser />} />
+        <Route path='/previous-users' element={<DisplayPreviousUsers  />} />
+     
       </Routes>
         {/* <UserData/> */}
       </div>

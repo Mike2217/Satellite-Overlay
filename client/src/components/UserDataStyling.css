@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-width: 100%;
-  border: lightgrey solid 5px;
+  /* border: lightgrey solid 5px; */
   margin-top: 150px;
 }
 
@@ -12,9 +12,10 @@
 #DataFormMessage{
   margin-top: -100px;
   color: lightcoral;
-  border: 5px solid rgb(118, 131, 136);
+  /* border: 5px solid rgb(118, 131, 136); */
   font-size: 25px;
   width: 35%;
+  font-weight: bold;
 }
 
 .main-container{
@@ -26,26 +27,28 @@
   color: lightpink;
   /* background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg'); */
 
-  border: green 10px solid;
+  /* border: green 10px solid; */
 
 }
 
 #about{
-  padding-bottom: 150px;
+  padding-bottom: 125px;
 }
 
 #prompt{
 
 }
 #DataFormWelcome{
-  border: lightgreen solid 5px;
+  /* border: lightgreen solid 5px; */
   font-size: 32px;
   color: #a303ff;
+  font-weight: bold;
 
 }
 #DataFormContainer{
   width: 100%;
-  border: lightcoral solid 5px;
+  margin-top: 20px;
+  /* border: lightcoral solid 5px; */
 }
 
 #UserDataForm{
@@ -73,15 +76,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: orange solid 5px;
+  /* border: orange solid 5px; */
 }
 #dataButtonMessage{
-  border: lightsalmon solid 5px;
+  /* border: lightsalmon solid 5px; */
   width: 100%;
 }
 #userDataButton{
   height: 300px;
   width: 300px;
-  border: blue solid 5px;
+  /* border: blue solid 5px; */
 
 }

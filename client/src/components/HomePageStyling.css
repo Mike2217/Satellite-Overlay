@@ -1,0 +1,87 @@
+#UserDataContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  /* border: lightgrey solid 5px; */
+  margin-top: 150px;
+}
+
+
+#DataFormMessage{
+  margin-top: -100px;
+  color: lightcoral;
+  /* border: 5px solid rgb(118, 131, 136); */
+  font-size: 25px;
+  width: 35%;
+}
+
+.main-container{
+  background-image: url('https://cerexio.com/wp-content/uploads/2020/08/spacex-starlink-cerexio-blog-post-cover-01.jpg');
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  color: lightpink;
+  /* background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg'); */
+
+  /* border: green 10px solid; */
+
+}
+
+#about{
+  padding-bottom: 150px;
+}
+
+#prompt{
+
+}
+#DataFormWelcome{
+  /* border: lightgreen solid 5px; */
+  font-size: 32px;
+  color: #a303ff;
+
+}
+#DataFormContainer{
+  width: 100%;
+  /* border: lightcoral solid 5px; */
+}
+
+#UserDataForm{
+  justify-content: center;
+  text-align: center;
+  /* color: white; */
+  font-size: 20px;
+  background: url('https://img.purch.com/rc/1280x800/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA0My8zMjgvb3JpZ2luYWwvYXJvdW5kLWEtc3Rhci1zeXN0ZW0tMTkyMC5qcGc=');
+  background-size: cover;
+  height: 50px;
+  width: 30%;
+  /* border: purple solid 5px; */
+}
+
+#submitButton{
+  background: url('https://img.purch.com/rc/1280x800/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA0My8zMjgvb3JpZ2luYWwvYXJvdW5kLWEtc3Rhci1zeXN0ZW0tMTkyMC5qcGc=');
+  color: #8d03ff;
+  margin-left: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 55px;
+  width: 150px;
+}
+#dataButtonContainer{
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* border: orange solid 5px; */
+}
+#dataButtonMessage{
+  /* border: lightsalmon solid 5px; */
+  width: 100%;
+}
+#userDataButton{
+  height: 300px;
+  width: 300px;
+  /* border: blue solid 5px; */
+
+}
