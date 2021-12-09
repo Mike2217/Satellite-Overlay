@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import React, { Component } from "react";
 import UserData from './UserData';
@@ -15,7 +14,7 @@ function Compare(props) {
   useEffect(() => {
     // console.log(props.satData)
     if (props.satData.length === 0) {
-      console.log('GOOD LUCK')
+      // console.log('GOOD LUCK')
     }
     else if (props.satData.length > 0) {
         const satelliteData = props.satData

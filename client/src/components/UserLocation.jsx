@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import SatelliteData from './SatelliteData';
-import LoadingStyle from './LoadingStyle.css'
+import './LoadingStyle.css'
 
 
 export default function UserLocation() {

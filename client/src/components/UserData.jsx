@@ -1,8 +1,7 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./UserDataStyling.css";
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
-import { postUserData, deleteUserData, BASE_URL, config } from "../services";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { postUserData, deleteUserData} from "../services";
 import DisplayCurrentUser from "./DisplayCurrentUser";
 
 export default function UserData(props) {
@@ -26,7 +25,6 @@ export default function UserData(props) {
     };
     await postUserData(newUserData);
 
-    
     setToggle(prevToggle => !prevToggle)
     // await axios.post(BASE_URL, config, newUserData)
     navigate("/Your-Nearest-Satellite-Data");
@@ -72,6 +70,7 @@ export default function UserData(props) {
                     </button>
                   <div id="dataButtonContainer">
                     <img
+                      alt='Satellite'
                       id="userDataButton"
                       src="https://www.sciencenews.org/wp-content/uploads/2020/03/032820_CC_satellites_inline-4_680-626x450.png"
                     />

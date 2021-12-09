@@ -9,34 +9,6 @@ import { config, BASE_URL } from '../services'
 export default function DisplayPreviousUsers() {
   
   const [previousUsers, setPreviousUsers] = useState([])
-  // const [prevUserName, setPrevUserName] = useState([])
-  // const [prevLongitude, setPrevLongitude] = useState([])
-  // const [prevLatitude, setPrevLatitude] = useState([])
-  // const [prevCloseSat, setPrevCloseSat] = useState([])
-  // const [prevAltitude, setPrevAltitude] = useState([])
-
-  // const prevUserData=[]
-  // const prevUserName = []
-  // const prevLongitude = []
-  // const prevLatitude = []
-  // const prevCloseSat= []
-  // const prevAltitude = []
-  
-  // prevUserName.push(previousUsers[i].fields.Username)
-  //   prevLongitude.push(previousUsers[i].fields.Longitude)
-  //   prevLatitude.push(previousUsers[i].fields.Latitude)
-  //   prevCloseSat.push(previousUsers[i].fields.ClosestSatellite)
-  //   prevAltitude.push(previousUsers[i].fields.Altitude)
-
-  // <td>{e.fields.Username]}</td>
-  // <td>{e.fields.Longitude}</td>
-  // <td>{e.fields.Latitude}</td>
-  // <td>{e.fields.ClosestSatellite}</td>
-  // <td>{e.fields.Altitude}</td>
-
-          
-        // previousUsers.map((e) => {
-
 
   useEffect(() => {
     const getAllUserData = async () => {
@@ -49,7 +21,7 @@ export default function DisplayPreviousUsers() {
   }, [])
   for(let i = 0; i<= previousUsers.length; i++) {
     return (
-    <div className='main-container'>
+      <div className='main-container'>
       <table id='userTable'>
           <thead>
             <tr>
@@ -61,8 +33,8 @@ export default function DisplayPreviousUsers() {
             </tr>
           </thead>
         <tbody>
-        {previousUsers.map((e) => (
-            <tr>
+        {previousUsers.map((e, key) => (
+            <tr key={key}>
             <td>{e.fields.Username}</td>
             <td>{e.fields.Longitude}</td>
             <td>{e.fields.Latitude}</td>
@@ -79,7 +51,6 @@ export default function DisplayPreviousUsers() {
     <div className='main-container'>
       <div>
     </div>
-      <h1>BEANS</h1>
         {/* {
         previousUsers.map((e) => {
           <ul>
