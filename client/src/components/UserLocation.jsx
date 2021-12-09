@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import SatelliteData from './SatelliteData';
+import LoadingStyle from './LoadingStyle.css'
+
 
 export default function UserLocation() {
 const [longitude, setLongitude] = useState(null)
@@ -22,8 +24,7 @@ const [latitude, setLatitude] = useState(null)
   }, [])
 
   
-  if (!longitude) return <h1>LOADING</h1>
-
+  if (!longitude) return <h1 id='LoadingBar'>LOADING... PLEASE WAIT</h1>
   // console.log(longitude, latitude)
 
   return (

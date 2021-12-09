@@ -1,0 +1,21 @@
+#LoadingBar{
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://miro.medium.com/max/1400/1*cD8WMb82cSXACDTG8mlWhw.gif');
+  font-size: 60px;
+  color: white;
+  background-size: cover;
+  min-height: 40vh;
+  min-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+

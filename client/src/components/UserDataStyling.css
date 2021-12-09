@@ -17,6 +17,18 @@
   width: 35%;
 }
 
+.main-container{
+  background-image: url('https://cerexio.com/wp-content/uploads/2020/08/spacex-starlink-cerexio-blog-post-cover-01.jpg');
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  color: lightpink;
+  /* background-image: url('https://cyberhoot.com/wp-content/uploads/2021/07/spacex-starlink-cerexio-blog-post-cover-01.jpeg'); */
+
+  border: green 10px solid;
+
+}
 
 #about{
   padding-bottom: 150px;

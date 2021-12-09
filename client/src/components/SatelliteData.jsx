@@ -6,7 +6,6 @@ import Compare from './Compare'
 
 
 export default function SatelliteData(props) {
-  
   const [satData, setSatData] = useState([])
   const latitude = props.latitude
   const longitude = props.longitude
