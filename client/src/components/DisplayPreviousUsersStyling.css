@@ -18,7 +18,20 @@ td{
 
 #userTable{
   border-collapse: collapse;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   border: 2px solid lightblue;
 }
+
+
+@media only screen and (max-width: 600px)  {
+    table{
+    width: 50%;
+    overflow: auto;
+  }
+  td, th{
+    font-size: 20px;
+    display:flex;
+    flex-flow: row wrap;
+  }
+} 

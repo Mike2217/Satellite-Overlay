@@ -6,6 +6,7 @@ import { postUserData, deleteUserData, BASE_URL, config } from "../services";
 import DisplayCurrentUser from "./DisplayCurrentUser";
 
 export default function UserData(props) {
+  const [toggle, setToggle] = useState(false)
   const [Username, setUserName] = useState("");
   const ClosestSatellite = props.closestSatellite;
   const Longitude = props.longitude;
@@ -23,9 +24,12 @@ export default function UserData(props) {
       Altitude,
       ClosestSatellite
     };
+    console.log('HELLO WORLD')
     await postUserData(newUserData);
-    // await axios.post(BASE_URL, config, newUserData)
 
+    
+    setToggle(prevToggle => !prevToggle)
+    // await axios.post(BASE_URL, config, newUserData)
     navigate("/Your-Nearest-Satellite-Data");
   };
 
@@ -64,11 +68,9 @@ export default function UserData(props) {
                     name="Username"
                     onChange={(e) => setUserName(e.target.value)}
                   />
-                  <Link to="/Your-Nearest-Satellite-Data">
                     <button type="submit" id="submitButton">
                       Submit
                     </button>
-                  </Link>
                   <div id="dataButtonContainer">
                     <img
                       id="userDataButton"
@@ -81,8 +83,8 @@ export default function UserData(props) {
           }
         />
         <Route
-          path="/Your-Nearest-Satellite-Data"
-          element={
+        path="/Your-Nearest-Satellite-Data"
+            element={
             <DisplayCurrentUser
               Username={Username}
               Longitude={Longitude}

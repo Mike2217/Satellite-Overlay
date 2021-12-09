@@ -23,10 +23,10 @@ function App() {
       <UserLocation />
       <Routes>
     
-        <Route path='/' element={<UserData />} />
-        <Route path='/Your-Nearest-Satellite-Data' element={<DisplayCurrentUser />} />
+        {/* <Route path='/' element={<UserData />} />
+        <Route path='/Your-Nearest-Satellite-Data' element={<DisplayCurrentUser />} /> */}
         <Route path='/previous-users' element={<DisplayPreviousUsers  />} />
-     
+    
       </Routes>
         {/* <UserData/> */}
       </div>
